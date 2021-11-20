@@ -27,14 +27,14 @@
 
 
 //2鍒嗛挓缁撴潫
-function closePass(){
-	document.getElementById("bodyDiv").style.display = 'none';
-	document.title = '閫氳璇佸凡澶辨晥';
-	history.pushState(null, null, location.href);
-	window.addEventListener('popstate', function(event) {
-		history.pushState(null, null, location.href );
-		//姝ゅ鍔犲叆鍥為€€鏃朵綘瑕佹墽琛岀殑浠ｇ爜
-		//window.location.href="about:blank";
-	});
-}
-setTimeout(closePass,120000);
+//function closePass(){
+//	document.getElementById("bodyDiv").style.display = 'none';
+//	document.title = '閫氳璇佸凡澶辨晥';
+//	history.pushState(null, null, location.href);
+//	window.addEventListener('popstate', function(event) {
+//		history.pushState(null, null, location.href );
+//		//姝ゅ鍔犲叆鍥為€€鏃朵綘瑕佹墽琛岀殑浠ｇ爜
+//		//window.location.href="about:blank";
+//	});
+//}
+//setTimeout(closePass,120000);
