@@ -31,17 +31,22 @@
         <p style="text-align:center; background-color: lime;" id="imgBg" onclick="changeUI()"><br><img src="static/picture/pass2.png"width="320px" height="215px" alt=""><br><font style="font-size:100px"></font>
             <div id="time" style="text-align:center; background-color: lime;">
            <script type="text/javascript">
-               var t = new Date();
-               var hour = t.getHours();
-               var minute = t.getMinutes();
-               var second = t.getSeconds();
-               var nowTime =hour + ((minute < 10) ? ":0" : ":") + minute + ((second < 10) ? ":0" : ":") + second;
-               document.write(nowTime);
-			   document.getElementById("time").style.fontSize="80px";
-			   var colorArr = new Array("maroon", "lime", "teal", "purple", "olive", "grey", "pink", "blue", "red","yellow","aqua","silver");
+		       var colorArr = new Array("maroon", "lime", "teal", "purple", "olive", "grey", "pink", "blue", "red","yellow","aqua","silver");
 	           var i = localStorage.value4*1;
 			   document.getElementById("imgBg").style.background = colorArr[i];
 			   document.getElementById("time").style.background = colorArr[i];
+			   document.getElementById("time").style.fontSize="80px";
+			   
+			   var show = document.getElementById("time");
+			   setInterval(function() { 
+				var t = new Date();
+				var hour = t.getHours();
+				var minute = t.getMinutes();
+				var second = t.getSeconds();
+				var nowTime =hour + ((minute < 10) ? ":0" : ":") + minute + ((second < 10) ? ":0" : ":") + second;
+				show.innerHTML = nowTime;
+               //document.write(nowTime);
+			   }, 1000);
            </script></div></p>
 
         <div class="weui-cells__title">学生出校通行证</div>
